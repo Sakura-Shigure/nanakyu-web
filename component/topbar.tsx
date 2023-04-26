@@ -1,27 +1,45 @@
+import { TopbarData } from "@/data/topbar.data";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 export default function Topbar() {
+  const route = useRouter();
   return (
     <>
       <div className="ts-row">
         <div className="column">
           <div className="ts-tab is-large is-start-aligned">
-            <a className="item">奶加</a>
+            <Link className="item" href={"/"}>
+              <div className="ts-image is-end-spaced">
+                <Image src="/image.png" alt={""} width={53} height={35} />
+              </div>
+              奶加
+            </Link>
           </div>
         </div>
         <div className="column is-fluid">
           <div className="ts-tab is-large is-center-aligned">
-            <a className="item is-active">首頁</a>
-            <a className="item">價目表</a>
-            <a className="item">注意事項</a>
-            <a className="item">作品範例</a>
+            {TopbarData.map((topbar) => (
+              <Link
+                key={topbar.link}
+                className={`item ${
+                  route.asPath === topbar.link ? "is-active" : ""
+                }`}
+                href={topbar.link}
+              >
+                {topbar.name}
+              </Link>
+            ))}
           </div>
         </div>
         <div className="column">
           <div className="ts-tab is-large is-end-aligned">
             <a className="item" href="https://www.twitch.tv/nanakyuu301">
-              <i className="bi bi-twitch"></i>
+              <span className="ts-icon is-twitch-icon"></span>
             </a>
             <a className="item" href="https://twitter.com/hellojoyin">
-              <i className="bi bi-twitter"></i>
+              <span className="ts-icon is-twitter-icon"></span>
             </a>
           </div>
         </div>
