@@ -7,7 +7,6 @@ export default function Document() {
       <body>
         <div className="ts-content is-fitted">
           <div className="ts-container is-narrow">
-            {/* <Title /> */}
             <Main />
             <NextScript />
           </div>
