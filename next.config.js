@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/nanakyu",
+  basePath: "/nanakyu-web",
 };
 
 module.exports = nextConfig
