@@ -13,7 +13,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
     <>
       <div className="ts-grid">
         <div className="column is-4-wide is-padding">
-          <div className="ts-menu is-start-icon is-separated">
+          <div className="ts-menu is-start-icon is-separated is-accent">
             {CommissionTypeData.map((commission) => (
               <>
                 <Link
@@ -44,7 +44,10 @@ export default function CommissionDetailComponent({ data }: Prop) {
             </div>
           </div>
           <div className="ts-space"></div>
-          <div className="ts-header is-big">
+          <div
+            className="ts-header is-big"
+            style={{ color: "var(--ts-primary-800)" }}
+          >
             <span className="ts-icon is-rounded is-end-spaced is-credit-card-icon" />
             {"詳細價格"}
           </div>
@@ -54,7 +57,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 <div className="ts-content is-dense">
                   <div className="ts-row">
                     <div className="column">
-                      <span className="ts-icon is-diamond-icon" />
+                      <span className="ts-icon is-diamond-icon is-secondary" />
                     </div>
                     <div className="column is-fluid">{desc}</div>
                   </div>
@@ -63,7 +66,10 @@ export default function CommissionDetailComponent({ data }: Prop) {
             ))}
           </div>
           <div className="ts-space"></div>
-          <div className="ts-header is-big">
+          <div
+            className="ts-header is-big"
+            style={{ color: "var(--ts-warning-800)" }}
+          >
             <span className="ts-icon is-rounded is-end-spaced is-arrow-right-icon" />
             {"委託步驟及付款流程"}
           </div>
@@ -72,9 +78,18 @@ export default function CommissionDetailComponent({ data }: Prop) {
               {data.steps.map((step) => (
                 <>
                   <a className="item is-completed">
-                    <div className="content">
-                      <div className="indicator"></div>
-                      <div className="label">
+                    <div
+                      className="content"
+                      style={{ color: "var(--ts-positive-800)" }}
+                    >
+                      <div
+                        className="indicator"
+                        style={{ color: "var(--ts-positive-800)" }}
+                      ></div>
+                      <div
+                        className="label"
+                        style={{ color: "var(--ts-positive-800)" }}
+                      >
                         <span className="ts-header is-large">{step.name}</span>
                       </div>
                     </div>
@@ -94,7 +109,10 @@ export default function CommissionDetailComponent({ data }: Prop) {
             </div>
           </div>
           <div className="ts-space"></div>
-          <div className="ts-header is-big">
+          <div
+            className="ts-header is-big"
+            style={{ color: "var(--ts-negative-800)" }}
+          >
             <span className="ts-icon is-rounded is-end-spaced is-triangle-exclamation-icon" />
             {"注意事項"}
           </div>
@@ -104,7 +122,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 <div className="ts-content is-dense">
                   <div className="ts-row">
                     <div className="column">
-                      <span className="ts-icon is-diamond-icon" />
+                      <span className="ts-icon is-diamond-icon is-secondary" />
                     </div>
                     <div className="column is-fluid">{desc}</div>
                   </div>

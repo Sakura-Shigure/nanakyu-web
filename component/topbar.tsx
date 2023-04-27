@@ -21,7 +21,7 @@ export default function TopbarComponent() {
               </div>
             </div>
             <div className="column is-fluid">
-              <div className="ts-tab is-large is-center-aligned">
+              <div className="ts-tab is-large is-center-aligned is-accent">
                 {TopbarData.map((topbar) => (
                   <Link
                     key={topbar.link}

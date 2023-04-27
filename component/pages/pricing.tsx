@@ -17,10 +17,10 @@ export default function PricingComponent() {
                 <Image src="/image.png" alt={""} width={500} height={300} />
               </div>
               <div className="ts-content">
-                <div className="ts-header is-big">{data.name}</div>
+                <div className="ts-header is-big fw-bold">{data.name}</div>
                 {data.short_description.map((desc) => (
                   <>
-                    <p className="ts-text is-medium">{desc}</p>
+                    <p className="ts-text is-medium text-secondary">{desc}</p>
                   </>
                 ))}
               </div>

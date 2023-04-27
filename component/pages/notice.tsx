@@ -5,7 +5,7 @@ export default function NoticeComponent() {
     <>
       {NoticeData.map((data) => (
         <>
-          <div className="ts-header is-big">
+          <div className="ts-header is-big text-danger">
             <span className="ts-icon is-end-spaced is-angle-right-icon" />
             {data.title}
           </div>
