@@ -28,7 +28,7 @@ export default function CommissionDetail() {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = CommissionTypeData.map((data) => ({
-    params: { name: data.id },
+    params: { commission: data.id },
   }));
   return { paths, fallback: false };
 };
