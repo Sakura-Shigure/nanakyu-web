@@ -1,3 +1,4 @@
+import Topbar from "@/component/topbar";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -5,15 +6,9 @@ export default function Document() {
     <Html lang="en" className="is-light">
       <Head />
       <body>
-        <div className="ts-content is-fitted">
-          <div className="ts-container is-narrow">
-            <Main />
-            <NextScript />
-          </div>
-        </div>
-        <div className="ts-divider"></div>
+        <NextScript />
+        <Main />
       </body>
-      {/* <Footer /> */}
     </Html>
   );
 }
