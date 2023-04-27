@@ -15,6 +15,6 @@ export const TopbarData: TopbarModel[] = [
   },
   {
     name: "作品範例",
-    link: "/example",
+    link: "/sample",
   },
 ];

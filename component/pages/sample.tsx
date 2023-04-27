@@ -1,4 +1,4 @@
-export default function Example() {
+export default function SampleComponent() {
   return (
     <>
       <div className="ts-placeholder">

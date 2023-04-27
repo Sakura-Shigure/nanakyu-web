@@ -1,4 +1,4 @@
-import Topbar from "@/component/topbar";
+import TopbarComponent from "@/component/topbar";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {

@@ -1,14 +1,14 @@
-import Footer from "./footer";
-import Topbar from "./topbar";
+import FooterComponent from "./footer";
+import TopbarComponent from "./topbar";
 
 interface Prop {
   element: JSX.Element;
 }
 
-export default function Container({ element }: Prop) {
+export default function ContainerComponent({ element }: Prop) {
   return (
     <>
-      <Topbar />
+      <TopbarComponent />
       <div className="ts-content is-vertically-very-padded">
         <div className="ts-container is-narrow">
           <div className="ts-app-layout is-full">
@@ -18,7 +18,7 @@ export default function Container({ element }: Prop) {
                 <div className="ts-space is-big" />
               </div>
               <div className="cell">
-                <Footer />
+                <FooterComponent />
               </div>
             </div>
           </div>

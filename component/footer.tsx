@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function FooterComponent() {
   return (
     <>
       <div className="ts-space is-big" />

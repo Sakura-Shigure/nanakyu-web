@@ -1,4 +1,4 @@
-export default function Notice() {
+export default function NoticeComponent() {
   return (
     <>
       <div className="ts-placeholder">

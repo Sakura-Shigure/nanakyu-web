@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function Topbar() {
-  const route = useRouter();
+export default function TopbarComponent() {
+  const currentBaseRoute = useRouter().asPath.split("/")[1] ?? null;
   return (
     <>
       <div className="ts-content is-fitted">
@@ -26,7 +26,9 @@ export default function Topbar() {
                   <Link
                     key={topbar.link}
                     className={`item ${
-                      route.asPath === topbar.link ? "is-active" : ""
+                      currentBaseRoute === topbar.link.split("/")[1]
+                        ? "is-active"
+                        : ""
                     }`}
                     href={topbar.link}
                   >
