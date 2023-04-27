@@ -9,7 +9,6 @@ interface Prop {
 
 export default function CommissionDetailComponent({ data }: Prop) {
   const currentSubRoute = useRouter().asPath.split("/")[2] ?? null;
-  console.log(currentSubRoute);
   return (
     <>
       <div className="ts-grid">
