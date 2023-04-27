@@ -25,10 +25,10 @@ export default function PricingComponent() {
                 ))}
               </div>
               <div className="ts-content position-absolute bottom-0 end-0">
-                <span className="ts-text is-big is-padded">NT$ </span>
-                <span className="ts-text is-massive is-padded">
-                  {data.price}
-                </span>
+                <div className="ts-statistic">
+                  <div className="unit">NT$ </div>
+                  <div className="value">{data.price.toLocaleString()}</div>
+                </div>
               </div>
             </Link>
           </>

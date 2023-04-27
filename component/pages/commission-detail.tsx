@@ -36,11 +36,11 @@ export default function CommissionDetailComponent({ data }: Prop) {
             <div className="column is-9-wide">
               <div className="ts-header is-massive">{data.name}</div>
             </div>
-            <div className="column is-1-wide">
-              <div className="ts-text is-large is-sub">{"NT$ "}</div>
-            </div>
             <div className="column is-6-wide">
-              <div className="ts-header is-massive">{data.price}</div>
+              <div className="ts-statistic">
+                <div className="unit">NT$ </div>
+                <div className="value">{data.price.toLocaleString()}</div>
+              </div>
             </div>
           </div>
           <div className="ts-space"></div>
