@@ -13,9 +13,13 @@ export default function TopbarComponent() {
             <div className="column">
               <div className="ts-tab is-large is-start-aligned">
                 <Link className="item" href={"/"}>
-                  <div className="ts-image is-end-spaced">
-                    <Image src="/image.png" alt={""} width={53} height={35} />
-                  </div>
+                  <Image
+                    className="ts-image is-end-spaced is-mini-height"
+                    src="/image.png"
+                    alt={""}
+                    width={53}
+                    height={35}
+                  />
                   奶加
                 </Link>
               </div>
