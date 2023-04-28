@@ -12,7 +12,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
   return (
     <>
       <div className="ts-grid">
-        <div className="column is-4-wide is-padding">
+        <div className="column is-4-wide is-padding tablet-:u-hidden">
           <div className="ts-menu is-start-icon is-separated is-accent">
             {CommissionTypeData.map((commission) => (
               <>
@@ -31,8 +31,8 @@ export default function CommissionDetailComponent({ data }: Prop) {
           </div>
         </div>
         <div className="column is-1-wide" />
-        <div className="column is-11-wide">
-          <div className="ts-grid">
+        <div className="column tablet-:is-16-wide desktop+:is-11-wide">
+          <div className="ts-grid tablet-:u-hidden">
             <div className="column is-9-wide">
               <div className="ts-header is-massive">{data.name}</div>
             </div>
@@ -41,6 +41,41 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 <div className="unit">NT$ </div>
                 <div className="value">{data.price.toLocaleString()}</div>
               </div>
+            </div>
+          </div>
+          <div className="desktop+:u-hidden">
+            <div className="ts-row">
+              <div className="column is-fluid ts-header is-huge">
+                {data.name}
+              </div>
+              <div
+                className="column ts-button is-icon is-outlined"
+                data-dropdown="commissions"
+              >
+                <span className="ts-icon is-ellipsis-icon"></span>
+              </div>
+              <div
+                className="ts-dropdown is-bottom"
+                data-name="commissions"
+                data-position="bottom-end"
+                style={{ maxWidth: "500px" }}
+              >
+                {CommissionTypeData.map((commission) => (
+                  <>
+                    <Link
+                      className="item"
+                      href={"/pricing/" + commission.id}
+                      key={commission.id}
+                    >
+                      <span className="ts-text is-big">{commission.name}</span>
+                    </Link>
+                  </>
+                ))}
+              </div>
+            </div>
+            <div className="ts-statistic">
+              <div className="unit">NT$ </div>
+              <div className="value">{data.price.toLocaleString()}</div>
             </div>
           </div>
           <div className="ts-space"></div>
@@ -78,10 +113,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
               {data.steps.map((step) => (
                 <>
                   <a className="item is-completed">
-                    <div
-                      className="content"
-                      style={{ color: "var(--ts-positive-800)" }}
-                    >
+                    <div className="content">
                       <div
                         className="indicator"
                         style={{ color: "var(--ts-positive-800)" }}

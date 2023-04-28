@@ -13,7 +13,7 @@ export default function TopbarComponent() {
             <div className="column">
               <div className="ts-tab is-large is-start-aligned">
                 <Link className="item" href={"/"}>
-                  <div className="ts-image is-end-spaced">
+                  <div className="ts-image is-mini is-end-spaced">
                     <Image src="/image.png" alt={""} width={53} height={35} />
                   </div>
                   奶加
@@ -21,7 +21,7 @@ export default function TopbarComponent() {
               </div>
             </div>
             <div className="column is-fluid">
-              <div className="ts-tab is-large is-center-aligned is-accent">
+              <div className="ts-tab is-large is-center-aligned is-accent mobile:u-hidden">
                 {TopbarData.map((topbar) => (
                   <Link
                     key={topbar.link}
@@ -45,6 +45,28 @@ export default function TopbarComponent() {
                 <a className="item" href="https://twitter.com/hellojoyin">
                   <span className="ts-icon is-twitter-icon"></span>
                 </a>
+                <button className="item" data-dropdown="links">
+                  <span className="ts-icon is-bars-icon"></span>
+                </button>
+
+                <div
+                  className="ts-dropdown is-bottom"
+                  data-name="links"
+                  data-position="bottom-end"
+                  style={{ maxWidth: "500px" }}
+                >
+                  {TopbarData.map((data) => (
+                    <>
+                      <Link
+                        className="item"
+                        href={"/" + data.link}
+                        key={data.link}
+                      >
+                        <span className="ts-text is-big">{data.name}</span>
+                      </Link>
+                    </>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

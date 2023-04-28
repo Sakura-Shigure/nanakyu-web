@@ -9,11 +9,11 @@ export default function PricingComponent() {
         {CommissionTypeData.map((data, i, row) => (
           <>
             <Link
-              className="ts-box is-horizontal"
+              className="ts-box tablet+:is-horizontal"
               href={`/pricing/${data.id}`}
               key={data.id}
             >
-              <div className="ts-image is-large is-covered">
+              <div className="ts-image tablet+:is-large is-covered">
                 <Image src="/image.png" alt={""} width={500} height={300} />
               </div>
               <div className="ts-content">
@@ -24,7 +24,13 @@ export default function PricingComponent() {
                   </>
                 ))}
               </div>
-              <div className="ts-content position-absolute bottom-0 end-0">
+              <div className="ts-content position-absolute bottom-0 end-0 mobile:u-hidden">
+                <div className="ts-statistic">
+                  <div className="unit">NT$ </div>
+                  <div className="value">{data.price.toLocaleString()}</div>
+                </div>
+              </div>
+              <div className="ts-content tablet+:u-hidden">
                 <div className="ts-statistic">
                   <div className="unit">NT$ </div>
                   <div className="value">{data.price.toLocaleString()}</div>
