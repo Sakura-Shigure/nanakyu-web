@@ -1,6 +1,3 @@
-import "tocas/dist/tocas.min.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
 import ContainerComponent from "@/component/container";
 import SampleComponent from "@/component/pages/sample";
 import HeadComponent from "@/component/head";

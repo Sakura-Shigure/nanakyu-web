@@ -1,6 +1,6 @@
-import "tocas/dist/tocas.min.css";
-// import "tocas/dist/tocas.min.js";
 import "@/styles/globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import type { AppProps } from "next/app";
 import Head from "next/head";
 

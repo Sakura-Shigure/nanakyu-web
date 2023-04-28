@@ -3,7 +3,6 @@ import HeadComponent from "@/component/head";
 import CommissionDetailComponent from "@/component/pages/commission-detail";
 import { CommissionTypeData } from "@/data/commission-type.data";
 import { GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function CommissionDetail() {
