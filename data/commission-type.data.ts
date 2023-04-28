@@ -2,13 +2,80 @@ import { CommissionTypeModel } from "@/model/commission-type.model";
 
 export const CommissionTypeData: CommissionTypeModel[] = [
   {
+    name: "貼圖",
+    link: "stickers",
+    short_description: [
+      "一些介紹(第一行).......",
+      "一些介紹(第二行).......",
+      "一些介紹(第三行).......",
+      "一些介紹(第四行).......",
+    ],
+    price: 300,
+    price_description: ["待新增"],
+    steps: [
+      {
+        name: "第一步",
+        description: ["一些說明"],
+      },
+      {
+        name: "第二步",
+        description: ["一些說明"],
+      },
+    ],
+    notice: ["待新增"],
+  },
+  {
+    name: "頭貼",
+    link: "headshot",
+    short_description: ["一些介紹(第一行).......", "一些介紹(第二行)......."],
+    price: 500,
+    price_description: ["待新增"],
+    steps: [
+      {
+        name: "第一步",
+        description: ["一些說明"],
+      },
+      {
+        name: "第二步",
+        description: ["一些說明"],
+      },
+    ],
+    notice: ["待新增"],
+  },
+  {
+    name: "插圖",
+    link: "illustration",
+    short_description: [
+      "一些介紹(第一行).......",
+      "一些介紹(第二行).......",
+      "一些介紹(第三行).......",
+      "一些介紹(第四行).......",
+      "一些介紹(第五行).......",
+    ],
+    price: 3000,
+    price_description: ["待新增"],
+    steps: [
+      {
+        name: "第一步",
+        description: ["一些說明"],
+      },
+      {
+        name: "第二步",
+        description: ["一些說明"],
+      },
+    ],
+    notice: ["待新增"],
+  },
+  {
     name: "Vtuber Live2D 模型",
     link: "live2d",
-    short_description: ["僅原畫拆分，不包含模型製作"],
+    short_description: ["(頁面 Demo 完成版)"],
     price: 18000,
     price_description: [
-      "如需由繪師設計(純文字設定)加收NT$3000",
-      "底價包含基礎表情(僅面部拆分)兩個，額外增加單個NT$500",
+      "如需由繪師設計(純文字設定) - 加收NT$3000",
+      "底價包含基礎表情(僅面部拆分)兩個 - 額外單個NT$500",
+      "髮型增加 - 加收NT$3000up",
+      "新衣裝 - 加收NT$5000up",
     ],
     steps: [
       {
@@ -43,42 +110,5 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       "如草圖階段非我方繪師這邊的原因導致不想要了/退單，則不退訂金",
       "有問題請一併提出不要一問一答，不接受臨時提議修改大範圍內容",
     ],
-  },
-  {
-    name: "插圖",
-    link: "illustration",
-    short_description: [
-      "一些介紹(第一行).......",
-      "一些介紹(第二行).......",
-      "一些介紹(第三行).......",
-      "一些介紹(第四行).......",
-      "一些介紹(第五行).......",
-    ],
-    price: 500,
-    price_description: [],
-    steps: [],
-    notice: [],
-  },
-  {
-    name: "貼圖",
-    link: "stickers",
-    short_description: [
-      "尺寸: 1000x1000 px",
-      "可以在Twitch使用",
-      "我想不到了 QQ",
-    ],
-    price: 500,
-    price_description: [],
-    steps: [],
-    notice: [],
-  },
-  {
-    name: "頭貼",
-    link: "headshot",
-    short_description: ["有模板"],
-    price: 500,
-    price_description: [],
-    steps: [],
-    notice: [],
   },
 ];
