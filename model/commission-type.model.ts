@@ -1,6 +1,6 @@
 export interface CommissionTypeModel {
-  id: string;
   name: string;
+  link: string;
   short_description: string[]; // max_length = 5
   price: number;
   price_description: string[];

@@ -2,8 +2,8 @@ import { CommissionTypeModel } from "@/model/commission-type.model";
 
 export const CommissionTypeData: CommissionTypeModel[] = [
   {
-    id: "live2d",
     name: "Vtuber Live2D 模型",
+    link: "live2d",
     short_description: ["僅原畫拆分，不包含模型製作"],
     price: 18000,
     price_description: [
@@ -45,8 +45,8 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
   },
   {
-    id: "illustration",
     name: "插圖",
+    link: "illustration",
     short_description: [
       "一些介紹(第一行).......",
       "一些介紹(第二行).......",
@@ -60,8 +60,8 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     notice: [],
   },
   {
-    id: "stickers",
     name: "貼圖",
+    link: "stickers",
     short_description: [
       "尺寸: 1000x1000 px",
       "可以在Twitch使用",
@@ -73,8 +73,8 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     notice: [],
   },
   {
-    id: "headshot",
     name: "頭貼",
+    link: "headshot",
     short_description: ["有模板"],
     price: 500,
     price_description: [],

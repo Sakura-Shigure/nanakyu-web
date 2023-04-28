@@ -14,19 +14,16 @@ export default function CommissionDetailComponent({ data }: Prop) {
       <div className="ts-grid">
         <div className="column is-4-wide is-padding tablet-:u-hidden">
           <div className="ts-menu is-start-icon is-separated is-accent">
-            {CommissionTypeData.map((commission) => (
-              <>
-                <Link
-                  className={`item ${
-                    commission.id === currentSubRoute ? "is-active" : ""
-                  }`}
-                  href={"/pricing/" + commission.id}
-                  key={commission.id}
-                >
-                  <span className="ts-icon is-caret-right-icon"></span>{" "}
-                  {commission.name}
-                </Link>
-              </>
+            {CommissionTypeData.map((typeData, i) => (
+              <Link
+                className={`item ${
+                  typeData.link === currentSubRoute ? "is-active" : ""
+                }`}
+                href={"/pricing/" + typeData.link}
+                key={i}
+              >
+                <i className="ts-icon bi-caret-right-fill" /> {typeData.name}
+              </Link>
             ))}
           </div>
         </div>
@@ -52,7 +49,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 className="column ts-button is-icon is-outlined"
                 data-dropdown="commissions"
               >
-                <span className="ts-icon is-ellipsis-icon"></span>
+                <i className="ts-icon bi-list" />
               </div>
               <div
                 className="ts-dropdown is-bottom"
@@ -60,16 +57,14 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 data-position="bottom-end"
                 style={{ maxWidth: "500px" }}
               >
-                {CommissionTypeData.map((commission) => (
-                  <>
-                    <Link
-                      className="item"
-                      href={"/pricing/" + commission.id}
-                      key={commission.id}
-                    >
-                      <span className="ts-text is-big">{commission.name}</span>
-                    </Link>
-                  </>
+                {CommissionTypeData.map((typeData, i) => (
+                  <Link
+                    className="item"
+                    href={"/pricing/" + typeData.link}
+                    key={i}
+                  >
+                    <span className="ts-text is-big">{typeData.name}</span>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -83,21 +78,19 @@ export default function CommissionDetailComponent({ data }: Prop) {
             className="ts-header is-big"
             style={{ color: "var(--ts-primary-800)" }}
           >
-            <span className="ts-icon is-rounded is-end-spaced is-credit-card-icon" />
+            <i className="ts-icon is-rounded is-end-spaced bi-credit-card" />
             {"詳細價格"}
           </div>
           <div className="ts-content">
-            {data.price_description.map((desc) => (
-              <>
-                <div className="ts-content is-dense">
-                  <div className="ts-row">
-                    <div className="column">
-                      <span className="ts-icon is-diamond-icon is-secondary" />
-                    </div>
-                    <div className="column is-fluid">{desc}</div>
+            {data.price_description.map((desc, i) => (
+              <div className="ts-content is-dense" key={i}>
+                <div className="ts-row">
+                  <div className="column">
+                    <i className="ts-icon is-secondary bi-diamond-fill" />
                   </div>
+                  <div className="column is-fluid">{desc}</div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <div className="ts-space"></div>
@@ -105,38 +98,36 @@ export default function CommissionDetailComponent({ data }: Prop) {
             className="ts-header is-big"
             style={{ color: "var(--ts-warning-800)" }}
           >
-            <span className="ts-icon is-rounded is-end-spaced is-arrow-right-icon" />
+            <span className="ts-icon is-rounded is-end-spaced is-big bi-arrow-right" />
             {"委託步驟及付款流程"}
           </div>
           <div className="ts-content">
             <div className="ts-procedure is-vertical is-unordered">
-              {data.steps.map((step) => (
-                <>
-                  <a className="item is-completed">
-                    <div className="content">
-                      <div
-                        className="indicator"
-                        style={{ color: "var(--ts-positive-800)" }}
-                      ></div>
-                      <div
-                        className="label"
-                        style={{ color: "var(--ts-positive-800)" }}
-                      >
-                        <span className="ts-header is-large">{step.name}</span>
-                      </div>
+              {data.steps.map((step, i) => (
+                <a className="item is-completed" key={i}>
+                  <div className="content">
+                    <div
+                      className="indicator"
+                      style={{ color: "var(--ts-positive-800)" }}
+                    ></div>
+                    <div
+                      className="label"
+                      style={{ color: "var(--ts-positive-800)" }}
+                    >
+                      <span className="ts-header is-large">{step.name}</span>
                     </div>
-                    <div className="ts-space"></div>
-                    <div className="ts-segment">
-                      <div className="ts-list is-unordered">
-                        {step.description.map((desc) => (
-                          <>
-                            <div className="item">{desc}</div>
-                          </>
-                        ))}
-                      </div>
+                  </div>
+                  <div className="ts-space"></div>
+                  <div className="ts-segment text-secondary-emphasis">
+                    <div className="ts-list is-unordered">
+                      {step.description.map((desc, j) => (
+                        <div className="item" key={j}>
+                          {desc}
+                        </div>
+                      ))}
                     </div>
-                  </a>
-                </>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
@@ -145,21 +136,19 @@ export default function CommissionDetailComponent({ data }: Prop) {
             className="ts-header is-big"
             style={{ color: "var(--ts-negative-800)" }}
           >
-            <span className="ts-icon is-rounded is-end-spaced is-triangle-exclamation-icon" />
+            <span className="ts-icon is-rounded is-end-spaced bi-exclamation-triangle-fill" />
             {"注意事項"}
           </div>
           <div className="ts-content">
-            {data.notice.map((desc) => (
-              <>
-                <div className="ts-content is-dense">
-                  <div className="ts-row">
-                    <div className="column">
-                      <span className="ts-icon is-diamond-icon is-secondary" />
-                    </div>
-                    <div className="column is-fluid">{desc}</div>
+            {data.notice.map((desc, i) => (
+              <div className="ts-content is-dense" key={i}>
+                <div className="ts-row">
+                  <div className="column">
+                    <span className="ts-icon is-secondary bi-diamond-fill" />
                   </div>
+                  <div className="column is-fluid">{desc}</div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>

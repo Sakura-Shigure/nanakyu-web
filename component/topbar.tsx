@@ -13,8 +13,8 @@ export default function TopbarComponent() {
             <div className="column">
               <div className="ts-tab is-large is-start-aligned">
                 <Link className="item" href={"/"}>
-                  <div className="ts-image is-mini is-end-spaced">
-                    <Image src="/image.png" alt={""} width={53} height={35} />
+                  <div className="ts-image is-end-spaced">
+                    <Image src="/image.png" alt={""} width={35} height={35} />
                   </div>
                   奶加
                 </Link>
@@ -22,17 +22,17 @@ export default function TopbarComponent() {
             </div>
             <div className="column is-fluid">
               <div className="ts-tab is-large is-center-aligned is-accent mobile:u-hidden">
-                {TopbarData.map((topbar) => (
+                {TopbarData.map((data, i) => (
                   <Link
-                    key={topbar.link}
+                    key={i}
                     className={`item ${
-                      currentBaseRoute === topbar.link.split("/")[1]
+                      currentBaseRoute === data.link.split("/")[1]
                         ? "is-active"
                         : ""
                     }`}
-                    href={topbar.link}
+                    href={data.link}
                   >
-                    {topbar.name}
+                    {data.name}
                   </Link>
                 ))}
               </div>
@@ -40,13 +40,13 @@ export default function TopbarComponent() {
             <div className="column">
               <div className="ts-tab is-large is-end-aligned">
                 <a className="item" href="https://www.twitch.tv/nanakyuu301">
-                  <span className="ts-icon is-twitch-icon"></span>
+                  <i className="ts-icon bi-twitch" />
                 </a>
                 <a className="item" href="https://twitter.com/hellojoyin">
-                  <span className="ts-icon is-twitter-icon"></span>
+                  <i className="ts-icon bi-twitter" />
                 </a>
                 <button className="item tablet+:u-hidden" data-dropdown="links">
-                  <span className="ts-icon is-bars-icon"></span>
+                  <i className="ts-icon bi-list" />
                 </button>
 
                 <div
@@ -55,12 +55,10 @@ export default function TopbarComponent() {
                   data-position="bottom-end"
                   style={{ maxWidth: "500px" }}
                 >
-                  {TopbarData.map((data) => (
-                    <>
-                      <Link className="item" href={data.link} key={data.link}>
-                        <span className="ts-text is-big">{data.name}</span>
-                      </Link>
-                    </>
+                  {TopbarData.map((data, i) => (
+                    <Link className="item" href={data.link} key={i}>
+                      <span className="ts-text is-big">{data.name}</span>
+                    </Link>
                   ))}
                 </div>
               </div>

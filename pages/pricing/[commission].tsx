@@ -8,9 +8,9 @@ import { useRouter } from "next/router";
 export default function CommissionDetail() {
   const router = useRouter();
   const id = router.query.commission;
-  const commission = CommissionTypeData.find((data) => data.id === id);
+  const commission = CommissionTypeData.find((data) => data.link === id);
   const title = `價目表 | ${
-    CommissionTypeData.find((data) => data.id === id)?.name
+    CommissionTypeData.find((data) => data.link === id)?.name
   }`;
   if (!id || !commission) return <></>;
   return (
@@ -25,7 +25,7 @@ export default function CommissionDetail() {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = CommissionTypeData.map((data) => ({
-    params: { commission: data.id },
+    params: { commission: data.link },
   }));
   return { paths, fallback: false };
 };

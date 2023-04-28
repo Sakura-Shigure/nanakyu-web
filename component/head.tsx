@@ -11,10 +11,6 @@ export default function HeadComponent({ title }: Prop) {
       <Head>
         <title>{title}</title>
         <meta property="og:title" content={title} key="title" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.css"
-        />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.js" />
       </Head>
     </>
