@@ -45,23 +45,19 @@ export default function TopbarComponent() {
                 <a className="item" href="https://twitter.com/hellojoyin">
                   <span className="ts-icon is-twitter-icon"></span>
                 </a>
-                <button className="item" data-dropdown="links">
+                <button className="item tablet+:u-hidden" data-dropdown="links">
                   <span className="ts-icon is-bars-icon"></span>
                 </button>
 
                 <div
-                  className="ts-dropdown is-bottom"
+                  className="ts-dropdown is-bottom tablet+:u-hidden"
                   data-name="links"
                   data-position="bottom-end"
                   style={{ maxWidth: "500px" }}
                 >
                   {TopbarData.map((data) => (
                     <>
-                      <Link
-                        className="item"
-                        href={"/" + data.link}
-                        key={data.link}
-                      >
+                      <Link className="item" href={data.link} key={data.link}>
                         <span className="ts-text is-big">{data.name}</span>
                       </Link>
                     </>
