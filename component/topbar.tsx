@@ -17,7 +17,13 @@ export default function TopbarComponent() {
                 <Link className="item" href={"/"}>
                   {ConfigData.logo.image && (
                     <div className=" ts-image is-end-spaced is-mini-height">
-                      <img src={ConfigData.logo.image} alt="" />
+                      <Image
+                        className="ts-image is-end-spaced is-mini-height"
+                        src={ConfigData.logo.image}
+                        alt={""}
+                        width={53}
+                        height={35}
+                      />
                     </div>
                   )}
                   {ConfigData.logo.text && (

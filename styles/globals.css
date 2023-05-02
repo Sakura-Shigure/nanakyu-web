@@ -6,5 +6,4 @@ html {
 
 .ts-image.is-mini-height img {
     height: 35px;
-    object-fit: contain;
 }
