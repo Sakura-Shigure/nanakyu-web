@@ -5,4 +5,5 @@ export interface ConfigModel {
   }[];
   mainTitle: string;
   logo: { image: string; text?: string } | { image?: string; text: string };
+  pageNotice?: string;
 }

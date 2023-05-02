@@ -4,11 +4,14 @@ export interface CommissionTypeModel {
   short_description: string[]; // max_length = 5
   price: number;
   price_description: string[];
-  steps: Steps[];
+  steps: {
+    name: string;
+    description: string[];
+  }[];
   notice: string[];
-}
-
-interface Steps {
-  name: string;
-  description: string[];
+  layout?: JSX.Element;
+  images: {
+    thumbnail: string;
+    samples: any; // depends on UI
+  };
 }

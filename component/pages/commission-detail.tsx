@@ -11,7 +11,6 @@ export default function CommissionDetailComponent({ data }: Prop) {
   const currentSubRoute = useRouter().asPath.split("/")[2] ?? null;
   return (
     <>
-      <div className="ts-space is-large tablet-:u-hidden" />
       <div className="ts-grid">
         <div className="column is-4-wide tablet-:u-hidden">
           <div className="ts-space is-small" />

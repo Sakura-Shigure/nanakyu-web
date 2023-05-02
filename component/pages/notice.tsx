@@ -3,7 +3,6 @@ import { NoticeData } from "@/data/notice.data";
 export default function NoticeComponent() {
   return (
     <>
-      <div className="ts-space" />
       <div className="ts-wrap is-vertical">
         {NoticeData.map((data, i) => (
           <div key={i}>

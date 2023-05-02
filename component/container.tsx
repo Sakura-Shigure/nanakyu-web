@@ -1,3 +1,4 @@
+import { ConfigData } from "@/data/config.data";
 import FooterComponent from "./footer";
 import TopbarComponent from "./topbar";
 
@@ -15,12 +16,17 @@ export default function ContainerComponent({ element }: Prop) {
             <div className="cell is-fluid is-vertical">
               <div className="cell is-fluid">
                 {/* 注意顯示條 */}
-                <div className="ts-notice is-dense">
-                  <div className="title">注意</div>
-                  <div className="content">
-                    目前網站正在施工中，價目表非真實委託價格
-                  </div>
-                </div>
+                {ConfigData.pageNotice && (
+                  <>
+                    <div className="ts-notice is-dense">
+                      <div className="title">注意</div>
+                      <div className="content">
+                        目前網站正在施工中，價目表非真實委託價格
+                      </div>
+                    </div>
+                    <div className="ts-space" />
+                  </>
+                )}
 
                 {element}
                 <div className="ts-space is-large" />

@@ -1,3 +1,4 @@
+import StickerSampleLayoutComponent from "@/component/pages/sample/stickerSample";
 import { CommissionTypeModel } from "@/model/commission-type.model";
 
 export const CommissionTypeData: CommissionTypeModel[] = [
@@ -23,6 +24,11 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       },
     ],
     notice: ["待新增"],
+    layout: StickerSampleLayoutComponent(),
+    images: {
+      thumbnail: "/sticker/sticker_thumbnail.png",
+      samples: "",
+    },
   },
   {
     name: "頭貼",
@@ -41,6 +47,10 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       },
     ],
     notice: ["待新增"],
+    images: {
+      thumbnail: "/headshot/headshot_thumbnail.png",
+      samples: "",
+    },
   },
   {
     name: "插圖",
@@ -65,6 +75,10 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       },
     ],
     notice: ["待新增"],
+    images: {
+      thumbnail: "/illustration/illustration_thumbnail.png",
+      samples: "",
+    },
   },
   {
     name: "Vtuber Live2D 模型",
@@ -110,5 +124,9 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       "如草圖階段非我方繪師這邊的原因導致不想要了/退單，則不退訂金",
       "有問題請一併提出不要一問一答，不接受臨時提議修改大範圍內容",
     ],
+    images: {
+      thumbnail: "/image.png",
+      samples: "",
+    },
   },
 ];

@@ -74,17 +74,11 @@ export default function TopbarComponent() {
                 {IntroduceData.contact.mail?.showOnTopbar && (
                   <a
                     className="item"
-                    href={"mailto:${IntroduceData.contact.mail.url}"}
+                    href={`mailto:${IntroduceData.contact.mail.url}`}
                   >
                     <i className="ts-icon bi-envelope" />
                   </a>
                 )}
-                <a className="item" href="https://www.twitch.tv/nanakyuu301">
-                  <i className="ts-icon bi-facebook" />
-                </a>
-                <a className="item" href="https://twitter.com/hellojoyin">
-                  <i className="ts-icon bi-instagram" />
-                </a>
                 <button className="item tablet+:u-hidden" data-dropdown="links">
                   <i className="ts-icon bi-list" />
                 </button>

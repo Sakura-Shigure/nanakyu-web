@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function PricingComponent() {
   return (
     <>
-      <div className="ts-space" />
       <div className="ts-wrap is-vertical">
         {CommissionTypeData.map((data, i) => (
           <Link
@@ -14,7 +13,7 @@ export default function PricingComponent() {
             key={i}
           >
             <div className="ts-image tablet+:is-large is-covered is-4-by-3">
-              <img src="/image.png" alt="" />
+              <img src={data.images.thumbnail} alt="" />
             </div>
             <div className="ts-content">
               <div className="ts-header is-big">{data.name}</div>
