@@ -17,7 +17,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
             {CommissionTypeData.map((typeData, i) => (
               <Link
                 className={`item ${
-                  typeData.link === currentSubRoute ? "is-active" : ""
+                  typeData.link === currentSubRoute && "is-active"
                 }`}
                 href={"/pricing/" + typeData.link}
                 key={i}
@@ -41,12 +41,12 @@ export default function CommissionDetailComponent({ data }: Prop) {
             </div>
           </div>
           <div className="desktop+:u-hidden">
-            <div className="ts-row">
+            <div className="ts-row is-middle-aligned">
               <div className="column is-fluid ts-header is-huge">
                 {data.name}
               </div>
               <div
-                className="column ts-button is-icon is-outlined"
+                className="column ts-button is-icon is-outlined "
                 data-dropdown="commissions"
               >
                 <i className="ts-icon bi-list" />

@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function PricingComponent() {
   return (
     <>
+      <div className="ts-space" />
       <div className="ts-wrap is-vertical">
         {CommissionTypeData.map((data, i) => (
           <Link
@@ -12,8 +13,8 @@ export default function PricingComponent() {
             href={`/pricing/${data.link}`}
             key={i}
           >
-            <div className="ts-image tablet+:is-large is-covered">
-              <Image src="/image.png" alt={""} width={500} height={300} />
+            <div className="ts-image tablet+:is-large is-covered is-4-by-3">
+              <img src="/image.png" alt="" />
             </div>
             <div className="ts-content">
               <div className="ts-header is-big">{data.name}</div>
@@ -23,13 +24,7 @@ export default function PricingComponent() {
                 </p>
               ))}
             </div>
-            <div className="ts-content position-absolute bottom-0 end-0 mobile:u-hidden">
-              <div className="ts-statistic">
-                <div className="unit">NT$ </div>
-                <div className="value">{data.price.toLocaleString()}</div>
-              </div>
-            </div>
-            <div className="ts-content tablet+:u-hidden">
+            <div className="ts-content tablet+:position-absolute tablet+:bottom-0 tablet+:end-0">
               <div className="ts-statistic">
                 <div className="unit">NT$ </div>
                 <div className="value">{data.price.toLocaleString()}</div>

@@ -9,7 +9,7 @@ export default function ContainerComponent({ element }: Prop) {
   return (
     <>
       <TopbarComponent />
-      <div className="ts-content is-vertically-very-padded">
+      <div className="ts-content is-vertically-padded">
         <div className="ts-container is-narrow">
           <div className="ts-app-layout is-full">
             <div className="cell is-fluid is-vertical">
@@ -22,9 +22,8 @@ export default function ContainerComponent({ element }: Prop) {
                   </div>
                 </div>
 
-                <div className="ts-space" />
                 {element}
-                <div className="ts-space is-big" />
+                <div className="ts-space is-large" />
               </div>
               <div className="cell">
                 <FooterComponent />

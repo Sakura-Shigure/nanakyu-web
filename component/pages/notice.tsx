@@ -3,13 +3,14 @@ import { NoticeData } from "@/data/notice.data";
 export default function NoticeComponent() {
   return (
     <>
-      {NoticeData.map((data, i) => (
-        <div key={i}>
-          <div className="ts-header is-big text-danger">
-            <span className="ts-icon is-end-spaced bi-chevron-right" />
-            {data.title}
-          </div>
-          <div className="ts-content">
+      <div className="ts-space" />
+      <div className="ts-wrap is-vertical">
+        {NoticeData.map((data, i) => (
+          <div key={i}>
+            <div className="ts-header is-big text-danger">
+              <span className="ts-icon is-end-spaced bi-chevron-right" />
+              {data.title}
+            </div>
             {data.content.map((desc, j) => (
               <div className="ts-content is-dense" key={j}>
                 <div className="ts-row">
@@ -23,8 +24,8 @@ export default function NoticeComponent() {
               </div>
             ))}
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 }
