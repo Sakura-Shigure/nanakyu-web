@@ -1,8 +1,11 @@
 import { CommissionTypeData } from "@/data/commission-type.data";
-import Image from "next/image";
 import Link from "next/link";
+import MaintainanceComponent from "../maintainance";
 
 export default function PricingComponent() {
+  if (CommissionTypeData.length === 0) {
+    return <MaintainanceComponent />;
+  }
   return (
     <>
       <div className="ts-wrap is-vertical">
