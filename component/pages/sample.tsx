@@ -55,7 +55,7 @@ export default function SampleComponent() {
         >
           {CommissionTypeData.map((data, i) => (
             <div className="item" onClick={() => commissionClick(data)} key={i}>
-              <span className="ts-text is-big">{data.name}</span>
+              <span className="ts-text is-large">{data.name}</span>
             </div>
           ))}
         </div>
