@@ -11,8 +11,11 @@ export default function CommissionDetailComponent({ data }: Prop) {
   const currentSubRoute = useRouter().asPath.split("/")[2] ?? null;
   return (
     <>
+      <div className="ts-space is-large tablet-:u-hidden" />
       <div className="ts-grid">
-        <div className="column is-4-wide is-padding tablet-:u-hidden">
+        <div className="column is-4-wide tablet-:u-hidden">
+          <div className="ts-space is-small" />
+
           <div className="ts-menu is-start-icon is-separated is-accent">
             {CommissionTypeData.map((typeData, i) => (
               <Link
@@ -27,8 +30,8 @@ export default function CommissionDetailComponent({ data }: Prop) {
             ))}
           </div>
         </div>
-        <div className="column is-1-wide" />
-        <div className="column tablet-:is-16-wide desktop+:is-11-wide">
+        <div className="column tablet-:is-hidden desktop+:is-1-wide" />
+        <div className="column is-top-aligned tablet-:is-16-wide desktop+:is-11-wide">
           <div className="ts-grid tablet-:u-hidden">
             <div className="column is-9-wide">
               <div className="ts-header is-massive">{data.name}</div>
