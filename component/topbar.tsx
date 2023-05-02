@@ -16,7 +16,7 @@ export default function TopbarComponent() {
               <div className="ts-tab is-large is-start-aligned">
                 <Link className="item" href={"/"}>
                   {ConfigData.logo.image && (
-                    <div className=" ts-image is-end-spaced is-mini-height">
+                    <div>
                       <Image
                         className="ts-image is-end-spaced is-mini-height"
                         src={ConfigData.logo.image}
