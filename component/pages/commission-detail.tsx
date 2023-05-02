@@ -49,13 +49,13 @@ export default function CommissionDetailComponent({ data }: Prop) {
               </div>
               <div
                 className="column ts-button is-icon is-outlined "
-                data-dropdown="commissions"
+                data-dropdown="commissionDetail"
               >
                 <i className="ts-icon bi-list" />
               </div>
               <div
                 className="ts-dropdown is-bottom"
-                data-name="commissions"
+                data-name="commissionDetail"
                 data-position="bottom-end"
                 style={{ maxWidth: "500px" }}
               >
