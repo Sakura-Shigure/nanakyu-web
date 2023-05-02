@@ -9,6 +9,7 @@ interface Prop {
 
 export default function CommissionDetailComponent({ data }: Prop) {
   const currentSubRoute = useRouter().asPath.split("/")[2] ?? null;
+  const basePath = "/pricing/";
   return (
     <>
       <div className="ts-grid">
@@ -21,7 +22,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 className={`item ${
                   typeData.link === currentSubRoute && "is-active"
                 }`}
-                href={"/pricing/" + typeData.link}
+                href={basePath + typeData.link}
                 key={i}
               >
                 <i className="ts-icon bi-caret-right-fill" /> {typeData.name}
@@ -62,7 +63,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 {CommissionTypeData.map((typeData, i) => (
                   <Link
                     className="item"
-                    href={"/pricing/" + typeData.link}
+                    href={basePath + typeData.link}
                     key={i}
                   >
                     <span className="ts-text is-big">{typeData.name}</span>

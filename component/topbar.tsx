@@ -95,7 +95,7 @@ export default function TopbarComponent() {
                   style={{ maxWidth: "500px" }}
                 >
                   {ConfigData.baseRoute.map((data, i) => (
-                    <Link className="item" href={data.link} key={i}>
+                    <Link className="item" href={basePath + data.link} key={i}>
                       <span className="ts-text is-big">{data.name}</span>
                     </Link>
                   ))}
