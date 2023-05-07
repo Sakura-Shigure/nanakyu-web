@@ -4,6 +4,6 @@ html {
     --ts-accent-color: #607ab8;
 }
 
-.ts-image.is-mini-height img {
-    height: 35px;
+.logo-image img {
+    display: block;
 }

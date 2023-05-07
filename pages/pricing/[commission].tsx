@@ -1,5 +1,5 @@
 import ContainerComponent from "@/component/container";
-import HeadComponent from "@/component/head";
+import HeadComponent from "@/component/main/head";
 import CommissionDetailComponent from "@/component/pages/commission-detail";
 import { CommissionTypeData } from "@/data/commission-type.data";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -15,9 +15,9 @@ export default function CommissionDetail() {
   if (!id || !commission) return <></>;
   return (
     <>
-      <HeadComponent title={title} />
       <ContainerComponent
         element={CommissionDetailComponent({ data: commission })}
+        title={title}
       ></ContainerComponent>
     </>
   );

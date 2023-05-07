@@ -1,4 +1,4 @@
-import StickerSampleLayoutComponent from "@/component/pages/sample/stickerSample";
+import StickerSampleLayoutComponent from "@/component/pages/sample/sticker-sample";
 import { CommissionTypeModel } from "@/model/commission-type.model";
 
 export const CommissionTypeData: CommissionTypeModel[] = [
