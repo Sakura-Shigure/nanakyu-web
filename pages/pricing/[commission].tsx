@@ -9,9 +9,9 @@ export default function CommissionDetail() {
   const router = useRouter();
   const id = router.query.commission;
   const commission = CommissionTypeData.find((data) => data.link === id);
-  const title = `價目表 | ${
+  const title = `《${
     CommissionTypeData.find((data) => data.link === id)?.name
-  }`;
+  }》價目表 | 奶加委託`;
   if (!id || !commission) return <></>;
   return (
     <>

@@ -61,7 +61,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       HeadshotSampleLayoutComponent({ data }),
     images: {
       thumbnail: "/headshot/headshot_thumbnail.png",
-      samples: _.range(16).map(
+      samples: _.range(11).map(
         (i: number) =>
           `/headshot/headshot_sample_${(i + 1)
             .toString()

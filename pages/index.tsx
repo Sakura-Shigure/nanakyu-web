@@ -1,7 +1,7 @@
 import ContainerComponent from "@/component/container";
 import WelcomeComponent from "@/component/pages/welcome";
 
-const title = "奶加";
+const title = "奶加委託";
 
 export default function Home() {
   return (
