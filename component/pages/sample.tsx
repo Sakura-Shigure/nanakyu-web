@@ -63,7 +63,7 @@ export default function SampleComponent() {
       <div className="ts-space tablet+:u-hidden"></div>
       {currentType && (
         <>
-          <div className="ts-content ts-header is-massive is-padded mobile:u-hidden">
+          <div className="ts-content ts-header is-massive mobile:u-hidden">
             {currentType?.name}
           </div>
         </>

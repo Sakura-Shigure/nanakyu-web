@@ -1,3 +1,4 @@
+import HeadshotSampleLayoutComponent from "@/component/pages/sample/headshot-sample";
 import StickerSampleLayoutComponent from "@/component/pages/sample/sticker-sample";
 import { CommissionTypeModel } from "@/model/commission-type.model";
 import _ from "lodash";
@@ -56,9 +57,16 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       },
     ],
     notice: ["待新增"],
+    layout: (data: CommissionTypeModel) =>
+      HeadshotSampleLayoutComponent({ data }),
     images: {
       thumbnail: "/headshot/headshot_thumbnail.png",
-      samples: "",
+      samples: _.range(16).map(
+        (i: number) =>
+          `/headshot/headshot_sample_${(i + 1)
+            .toString()
+            .padStart(2, "0")}.webp`
+      ),
     },
   },
   {
