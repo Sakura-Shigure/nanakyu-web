@@ -9,9 +9,10 @@ interface Prop {
 }
 
 export default function ContainerComponent({ title, element }: Prop) {
+  console.log(title);
   return (
     <>
-      {title !== "" ?? <HeadComponent title={title} />}
+      <HeadComponent title={title} />
       <TopbarComponent />
       <div className="ts-content is-vertically-padded">
         <div className="ts-container is-narrow">
