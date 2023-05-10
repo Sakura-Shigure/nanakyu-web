@@ -68,9 +68,9 @@ export default function SampleComponent() {
           </div>
         </>
       )}
-      {(currentType && currentType.layout(currentType)) || (
-        <MaintainanceComponent />
-      )}
+      {(currentType &&
+        currentType.layout &&
+        currentType.layout(currentType)) || <MaintainanceComponent />}
     </>
   );
 }
