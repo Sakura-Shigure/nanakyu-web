@@ -9,7 +9,6 @@ interface Prop {
 }
 
 export default function ContainerComponent({ title, element }: Prop) {
-  console.log(title);
   return (
     <>
       <HeadComponent title={title} />

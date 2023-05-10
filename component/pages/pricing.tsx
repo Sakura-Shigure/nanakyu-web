@@ -22,7 +22,7 @@ export default function PricingComponent() {
               <div className="ts-header is-big">
                 {data.name}
                 {data.is_stop && (
-                  <span className="ts-badge is-negative is-start-spaced">
+                  <span className="ts-badge is-negative is-outlined is-start-spaced">
                     暫停委託
                   </span>
                 )}
