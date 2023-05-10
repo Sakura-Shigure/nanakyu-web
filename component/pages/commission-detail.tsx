@@ -28,7 +28,6 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 <i className="ts-icon bi-caret-right-fill" /> {typeData.name}
                 {typeData.is_stop && (
                   <span className="ts-badge is-negative is-outlined is-start-spaced is-small is-dense">
-                    {/* <i className="bi bi-x-lg"></i> */}
                     暫停
                   </span>
                 )}
