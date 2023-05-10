@@ -1,27 +1,20 @@
-import MaintainanceComponent from "@/component/maintainance";
+import { CommissionTypeModel } from "@/model/commission-type.model";
 
-export default function StickerSampleLayoutComponent() {
+interface Prop {
+  data: CommissionTypeModel;
+}
+
+export default function StickerSampleLayoutComponent({ data }: Prop) {
   return (
     <>
-      <div className="ts-content is-vertically-very-padded is-rounded">
-        <div className="ts-center">
-          <div className="ts-header is-secondary">COMING SOON</div>
-          <div className="ts-text is-secondary">貼圖頁面正在準備中</div>
-        </div>
+      <div className="ts-grid is-compact tablet+:is-5-columns mobile:is-3-columns">
+        {data.images.samples.template.map((img: string, i: number) => (
+          <div className="column ts-segment ts-image" key={i}>
+            <img src={img} alt="" />
+          </div>
+        ))}
       </div>
-      <div className="ts-space"></div>
-      <div className="ts-placeholder">
-        <div className="image is-header"></div>
-        <div className="text"></div>
-        <div className="text"></div>
-        <div className="text"></div>
-        <div className="text"></div>
-        <div className="text"></div>
-        <div className="text is-header"></div>
-        <div className="text"></div>
-        <div className="text"></div>
-        <div className="text"></div>
-      </div>
+      {/* <img src={data.images.samples[0]} alt="" /> */}
     </>
   );
 }

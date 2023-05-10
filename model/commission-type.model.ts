@@ -1,3 +1,5 @@
+import { ReactElement } from "react";
+
 export interface CommissionTypeModel {
   name: string;
   link: string;
@@ -9,7 +11,7 @@ export interface CommissionTypeModel {
     description: string[];
   }[];
   notice: string[];
-  layout?: JSX.Element;
+  layout?: any;
   images: {
     thumbnail: string;
     samples: any; // depends on UI

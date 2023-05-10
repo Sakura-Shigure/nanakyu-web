@@ -60,7 +60,17 @@ export default function SampleComponent() {
           ))}
         </div>
       </div>
-      {(currentType && currentType.layout) || <MaintainanceComponent />}
+      <div className="ts-space tablet+:u-hidden"></div>
+      {currentType && (
+        <>
+          <div className="ts-content ts-header is-massive is-padded mobile:u-hidden">
+            {currentType?.name}
+          </div>
+        </>
+      )}
+      {(currentType && currentType.layout(currentType)) || (
+        <MaintainanceComponent />
+      )}
     </>
   );
 }

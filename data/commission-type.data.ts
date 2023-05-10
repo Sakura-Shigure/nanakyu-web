@@ -1,5 +1,6 @@
 import StickerSampleLayoutComponent from "@/component/pages/sample/sticker-sample";
 import { CommissionTypeModel } from "@/model/commission-type.model";
+import _ from "lodash";
 
 export const CommissionTypeData: CommissionTypeModel[] = [
   {
@@ -24,10 +25,18 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       },
     ],
     notice: ["待新增"],
-    layout: StickerSampleLayoutComponent(),
+    layout: (data: CommissionTypeModel) =>
+      StickerSampleLayoutComponent({ data }),
     images: {
       thumbnail: "/sticker/sticker_thumbnail.png",
-      samples: "",
+      samples: {
+        template: _.range(16).map(
+          (i: number) =>
+            `/sticker/sticker_sample_${(i + 1)
+              .toString()
+              .padStart(2, "0")}.webp`
+        ),
+      },
     },
   },
   {
