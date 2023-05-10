@@ -1,6 +1,5 @@
 import ContainerComponent from "@/component/container";
 import NoticeComponent from "@/component/pages/notice";
-import HeadComponent from "@/component/main/head";
 
 const title = "注意事項 | 奶加委託";
 

@@ -1,6 +1,4 @@
-import HeadComponent from "@/component/main/head";
 import { CommissionTypeModel } from "@/model/commission-type.model";
-import Head from "next/head";
 
 interface Prop {
   data: CommissionTypeModel;

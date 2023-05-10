@@ -1,4 +1,3 @@
-import { ConfigData } from "@/data/config.data";
 import FooterComponent from "./main/footer";
 import TopbarComponent from "./main/topbar";
 import HeadComponent from "./main/head";
@@ -12,7 +11,7 @@ interface Prop {
 export default function ContainerComponent({ title, element }: Prop) {
   return (
     <>
-      <HeadComponent title={title} />
+      {title !== "" ?? <HeadComponent title={title} />}
       <TopbarComponent />
       <div className="ts-content is-vertically-padded">
         <div className="ts-container is-narrow">

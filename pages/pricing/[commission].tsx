@@ -1,5 +1,4 @@
 import ContainerComponent from "@/component/container";
-import HeadComponent from "@/component/main/head";
 import CommissionDetailComponent from "@/component/pages/commission-detail";
 import { CommissionTypeData } from "@/data/commission-type.data";
 import { GetStaticPaths, GetStaticProps } from "next";

@@ -1,5 +1,4 @@
 import ContainerComponent from "@/component/container";
-import HeadComponent from "@/component/main/head";
 import SampleComponent from "@/component/pages/sample";
 import React from "react";
 
