@@ -3,6 +3,7 @@ import { ReactElement } from "react";
 export interface CommissionTypeModel {
   name: string;
   link: string;
+  is_stop?: boolean;
   short_description: string[]; // max_length = 5
   price: number;
   price_description: string[];

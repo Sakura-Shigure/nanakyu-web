@@ -26,6 +26,11 @@ export default function CommissionDetailComponent({ data }: Prop) {
                 key={i}
               >
                 <i className="ts-icon bi-caret-right-fill" /> {typeData.name}
+                {typeData.is_stop && (
+                  <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+                    <i className="bi bi-x-lg"></i>
+                  </span>
+                )}
               </Link>
             ))}
           </div>
@@ -35,6 +40,11 @@ export default function CommissionDetailComponent({ data }: Prop) {
           <div className="ts-grid tablet-:u-hidden">
             <div className="column is-9-wide">
               <div className="ts-header is-massive">{data.name}</div>
+              {data.is_stop && (
+                <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+                  暫停委託
+                </span>
+              )}
             </div>
             <div className="column is-6-wide">
               <div className="ts-statistic">
@@ -67,6 +77,11 @@ export default function CommissionDetailComponent({ data }: Prop) {
                     key={i}
                   >
                     <span className="ts-text is-big">{typeData.name}</span>
+                    {typeData.is_stop && (
+                      <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+                        暫停委託
+                      </span>
+                    )}
                   </Link>
                 ))}
               </div>
@@ -75,6 +90,11 @@ export default function CommissionDetailComponent({ data }: Prop) {
               <div className="unit">NT$ </div>
               <div className="value">{data.price.toLocaleString()}</div>
             </div>
+            {data.is_stop && (
+              <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+                暫停委託
+              </span>
+            )}
           </div>
           <div className="ts-space"></div>
           <div

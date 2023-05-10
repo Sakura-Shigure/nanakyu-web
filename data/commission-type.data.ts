@@ -40,7 +40,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     },
   },
   {
-    name: "頭貼",
+    name: "頭像",
     link: "headshot",
     short_description: ["一些介紹(第一行).......", "一些介紹(第二行)......."],
     price: 500,
@@ -86,6 +86,35 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     notice: ["待新增"],
     images: {
       thumbnail: "/illustration/illustration_thumbnail.png",
+      samples: "",
+    },
+    is_stop: true,
+  },
+  {
+    name: "人物設計",
+    link: "character_design",
+    short_description: [
+      "一些介紹(第一行).......",
+      "一些介紹(第二行).......",
+      "一些介紹(第三行).......",
+      "一些介紹(第四行).......",
+      "一些介紹(第五行).......",
+    ],
+    price: 2000,
+    price_description: ["待新增"],
+    steps: [
+      {
+        name: "第一步",
+        description: ["一些說明"],
+      },
+      {
+        name: "第二步",
+        description: ["一些說明"],
+      },
+    ],
+    notice: ["待新增"],
+    images: {
+      thumbnail: "/image.png",
       samples: "",
     },
   },
@@ -137,5 +166,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       thumbnail: "/image.png",
       samples: "",
     },
+    is_stop: true,
   },
 ];
