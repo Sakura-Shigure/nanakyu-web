@@ -70,7 +70,10 @@ export default function SampleComponent() {
         <div className="ts-space tablet+:u-hidden"></div>
         {currentType && (
           <>
-            <div className="ts-content ts-header is-massive mobile:u-hidden">
+            <div
+              className="ts-content ts-header is-massive mobile:u-hidden"
+              style={{ color: "var(--ts-primary-900)" }}
+            >
               {currentType?.name}
             </div>
           </>
