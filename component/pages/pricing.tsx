@@ -19,7 +19,14 @@ export default function PricingComponent() {
               <img src={data.images.thumbnail} alt="" />
             </div>
             <div className="ts-content">
-              <div className="ts-header is-big">{data.name}</div>
+              <div className="ts-header is-big">
+                {data.name}
+                {data.is_stop && (
+                  <span className="ts-badge is-negative is-start-spaced">
+                    暫停委託
+                  </span>
+                )}
+              </div>
               {data.short_description.map((desc, j) => (
                 <p className="ts-text is-medium text-secondary" key={j}>
                   {desc}
