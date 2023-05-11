@@ -22,7 +22,7 @@ export default function SampleComponent() {
   return (
     <>
       <div>
-        <HeadComponent title={`《${currentType?.name}》作品範例 | 奶加委託`} />
+        <HeadComponent title={`《${currentType?.name}》作品範例 | 奶加`} />
         <div className="ts-segment is-secondary mobile:u-hidden">
           <div className="ts-breadcrumb is-stepped is-large">
             {CommissionTypeData.map((data, i) => (

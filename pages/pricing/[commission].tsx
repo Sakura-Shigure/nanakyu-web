@@ -10,7 +10,7 @@ export default function CommissionDetail() {
   const commission = CommissionTypeData.find((data) => data.link === id);
   const title = `《${
     CommissionTypeData.find((data) => data.link === id)?.name
-  }》價目表 | 奶加委託`;
+  }》價目表 | 奶加`;
   if (!id || !commission) return <></>;
   return (
     <>

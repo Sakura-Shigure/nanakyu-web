@@ -1,7 +1,7 @@
 import ContainerComponent from "@/component/container";
 import PricingComponent from "@/component/pages/pricing";
 
-const title = "價目表 | 奶加委託";
+const title = "價目表 | 奶加";
 
 export default function Home() {
   return (
