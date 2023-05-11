@@ -1,5 +1,7 @@
+import CharacterDesignLayoutComponent from "@/component/pages/sample/character-design-sample";
 import HeadshotSampleLayoutComponent from "@/component/pages/sample/headshot-sample";
 import IllustrationLayoutComponent from "@/component/pages/sample/illustration-sample";
+import Live2DLayoutComponent from "@/component/pages/sample/live2d-sample";
 import StickerSampleLayoutComponent from "@/component/pages/sample/sticker-sample";
 import { CommissionTypeModel } from "@/model/commission-type.model";
 import _ from "lodash";
@@ -187,9 +189,16 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       "有問題請一併提出不要一問一答，不接受臨時提議修改大範圍內容",
       "若修改次數超過，則依照改動幅度每次酌收總額的 5%~20%",
     ],
+    layout: (data: CommissionTypeModel) =>
+      CharacterDesignLayoutComponent({ data }),
     images: {
       thumbnail: "/image.png",
-      samples: "",
+      samples: _.range(4).map(
+        (i: number) =>
+          `/character-design/character_design_sample_${(i + 1)
+            .toString()
+            .padStart(2, "0")}.webp`
+      ),
     },
     is_stop: true,
   },
@@ -237,9 +246,13 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       "如草圖階段非我方繪師這邊的原因導致不想要了/退單，則不退訂金",
       "有問題請一併提出不要一問一答，不接受臨時提議修改大範圍內容",
     ],
+    layout: (data: CommissionTypeModel) => Live2DLayoutComponent({ data }),
     images: {
       thumbnail: "/image.png",
-      samples: "",
+      samples: _.range(2).map(
+        (i: number) =>
+          `/live2d/live2d_sample_${(i + 1).toString().padStart(2, "0")}.webp`
+      ),
     },
     is_stop: true,
   },
