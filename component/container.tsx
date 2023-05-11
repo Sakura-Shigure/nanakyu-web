@@ -1,4 +1,3 @@
-import { ConfigData } from "@/data/config.data";
 import FooterComponent from "./main/footer";
 import TopbarComponent from "./main/topbar";
 import HeadComponent from "./main/head";

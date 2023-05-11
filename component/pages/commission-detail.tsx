@@ -27,8 +27,8 @@ export default function CommissionDetailComponent({ data }: Prop) {
               >
                 <i className="ts-icon bi-caret-right-fill" /> {typeData.name}
                 {typeData.is_stop && (
-                  <span className="ts-badge is-negative is-start-spaced is-small is-dense">
-                    <i className="bi bi-x-lg"></i>
+                  <span className="ts-badge is-negative is-outlined is-start-spaced is-small is-dense">
+                    暫停
                   </span>
                 )}
               </Link>
@@ -41,7 +41,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
             <div className="column is-9-wide">
               <div className="ts-header is-massive">{data.name}</div>
               {data.is_stop && (
-                <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+                <span className="ts-badge is-negative is-outlined is-start-spaced is-small is-dense">
                   暫停委託
                 </span>
               )}
@@ -78,7 +78,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
                   >
                     <span className="ts-text is-big">{typeData.name}</span>
                     {typeData.is_stop && (
-                      <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+                      <span className="ts-badge is-negative is-start-spaced is-outlined is-small is-dense">
                         暫停委託
                       </span>
                     )}
@@ -91,7 +91,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
               <div className="value">{data.price.toLocaleString()}</div>
             </div>
             {data.is_stop && (
-              <span className="ts-badge is-negative is-start-spaced is-small is-dense">
+              <span className="ts-badge is-negative is-start-spaced is-outlined is-small is-dense">
                 暫停委託
               </span>
             )}
