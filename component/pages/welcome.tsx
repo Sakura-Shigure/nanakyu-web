@@ -1,14 +1,11 @@
 import { IntroduceData } from "@/data/introduce.data";
 import Link from "next/link";
-import ScriptComponent from "../main/script";
 
 export default function WelcomeComponent() {
   return (
     <>
-      <ScriptComponent />
       <div className="ts-wrap is-vertical tablet+:u-hidden">
         <Introduce />
-
         <div className="ts-space" />
       </div>
       <div className="ts-image">

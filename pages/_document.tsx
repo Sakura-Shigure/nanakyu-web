@@ -8,6 +8,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.css"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.js" />
       </Head>
       <body>
         <NextScript />

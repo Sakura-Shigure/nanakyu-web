@@ -2,14 +2,12 @@ import { ConfigData } from "@/data/config.data";
 import { IntroduceData } from "@/data/introduce.data";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import ScriptComponent from "./script";
 
 export default function TopbarComponent() {
   const currentBaseRoute = useRouter().asPath.split("/")[1] ?? null;
   const basePath = "/";
   return (
     <>
-      <ScriptComponent />
       <div className="ts-content is-fitted">
         <div className="ts-container is-narrow">
           <div className="ts-row">
