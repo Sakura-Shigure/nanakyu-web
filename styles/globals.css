@@ -7,3 +7,10 @@ html {
 .logo-image img {
     display: block;
 }
+
+.bg img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index: -1;
+}

@@ -9,6 +9,8 @@ export interface IntroduceModel {
     twitch?: ContactModel;
     mail?: ContactModel;
   };
+
+  description: string[];
 }
 
 interface ContactModel {
