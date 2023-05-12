@@ -17,4 +17,5 @@ export const IntroduceData: IntroduceModel = {
       url: "https://www.twitch.tv/nanakyuu301",
     },
   },
+  // stop_commission: true,
 };

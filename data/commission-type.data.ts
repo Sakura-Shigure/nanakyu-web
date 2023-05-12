@@ -67,6 +67,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
         ),
       },
     },
+    // is_stop: true,
   },
   {
     name: "頭像",
@@ -118,27 +119,18 @@ export const CommissionTypeData: CommissionTypeModel[] = [
             .padStart(2, "0")}.webp`
       ),
     },
+    // is_stop: true,
   },
   {
     name: "插圖",
     link: "illustration",
-    short_description: [
-      "一些介紹(第一行).......",
-      "一些介紹(第二行).......",
-      "一些介紹(第三行).......",
-      "一些介紹(第四行).......",
-      "一些介紹(第五行).......",
-    ],
+    short_description: ["說明尚未準備"],
     price: 3000,
     price_description: ["待新增"],
     steps: [
       {
-        name: "第一步",
-        description: ["一些說明"],
-      },
-      {
-        name: "第二步",
-        description: ["一些說明"],
+        name: "待新增",
+        description: ["待新增"],
       },
     ],
     notice: ["待新增"],
@@ -153,6 +145,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
             .padStart(2, "0")}.webp`
       ),
     },
+    // is_stop: true,
   },
   {
     name: "人物設計草圖",
@@ -203,7 +196,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     is_stop: true,
   },
   {
-    name: "Vtuber Live2D 模型",
+    name: "Live2D 模型",
     link: "live2d",
     short_description: ["僅原畫拆分，不包含模型製作、三視圖"],
     price: 18000,
