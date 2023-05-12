@@ -4,6 +4,7 @@ import { useState } from "react";
 import MaintainanceComponent from "../maintainance";
 import { CommissionTypeModel } from "@/model/commission-type.model";
 import HeadComponent from "../main/head";
+import { ConfigData } from "@/data/config.data";
 
 export default function SampleComponent() {
   if (CommissionTypeData.length === 0) {
@@ -22,7 +23,9 @@ export default function SampleComponent() {
   return (
     <>
       <div>
-        <HeadComponent title={`《${currentType?.name}》作品範例 | 奶加`} />
+        <HeadComponent
+          title={`《${currentType?.name}》作品範例 | ${ConfigData.mainTitle}`}
+        />
         <div className="ts-segment is-secondary mobile:u-hidden">
           <div className="ts-breadcrumb is-stepped is-large">
             {CommissionTypeData.map((data, i) => (

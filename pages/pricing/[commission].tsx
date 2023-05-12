@@ -1,6 +1,7 @@
 import ContainerComponent from "@/component/container";
 import CommissionDetailComponent from "@/component/pages/commission-detail";
 import { CommissionTypeData } from "@/data/commission-type.data";
+import { ConfigData } from "@/data/config.data";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 
@@ -10,7 +11,7 @@ export default function CommissionDetail() {
   const commission = CommissionTypeData.find((data) => data.link === id);
   const title = `《${
     CommissionTypeData.find((data) => data.link === id)?.name
-  }》價目表 | 奶加`;
+  }》價目表 | ${ConfigData.mainTitle}`;
   if (!id || !commission) return <></>;
   return (
     <>
