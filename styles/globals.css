@@ -14,3 +14,8 @@ html {
     top:0px;
     z-index: -1;
 }
+
+img.pricing {
+    max-width: 100%;
+    width: 800px;
+}
