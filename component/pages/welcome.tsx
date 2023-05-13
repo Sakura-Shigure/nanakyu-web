@@ -1,12 +1,9 @@
 import { IntroduceData } from "@/data/introduce.data";
 import Link from "next/link";
-import HeadComponent from "../main/head";
-import { ConfigData } from "@/data/config.data";
 
 export default function WelcomeComponent() {
   return (
     <>
-      <HeadComponent title={`${ConfigData.mainTitle}`} />
       <div className="ts-wrap is-vertical tablet+:u-hidden">
         <Introduce />
         <NoCommission />

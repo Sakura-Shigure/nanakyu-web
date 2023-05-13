@@ -1,7 +1,6 @@
 import { CommissionTypeData } from "@/data/commission-type.data";
 import Link from "next/link";
 import MaintainanceComponent from "../maintainance";
-import { inherits } from "util";
 
 export default function PricingComponent() {
   if (CommissionTypeData.length === 0) {
