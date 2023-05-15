@@ -1,6 +1,5 @@
 export interface IntroduceModel {
   name: string;
-
   contact: {
     facebook?: ContactModel;
     instagram?: ContactModel;
@@ -9,8 +8,8 @@ export interface IntroduceModel {
     twitch?: ContactModel;
     mail?: ContactModel;
   };
-
   description: string[];
+  stop_commission?: boolean;
 }
 
 interface ContactModel {

@@ -23,12 +23,4 @@ export const NoticeData: NoticeModel[] = [
     title: "付款方式",
     content: ["銀行轉帳", "郵局無摺", "超商代碼(需加收手續費)"],
   },
-  {
-    title: "聯絡資訊",
-    content: [
-      "Discord: 奶加#0000",
-      "Twitter: @hellojoyin",
-      "Mail: example@example.com",
-    ],
-  },
 ];

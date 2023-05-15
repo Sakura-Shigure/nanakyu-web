@@ -1,23 +1,24 @@
 import { IntroduceData } from "@/data/introduce.data";
-import MaintainanceComponent from "../maintainance";
 import Link from "next/link";
 
 export default function WelcomeComponent() {
   return (
     <>
-      {" "}
       <div className="ts-wrap is-vertical tablet+:u-hidden">
         <Introduce />
-
-        <div className="ts-space" />
+        <NoCommission />
       </div>
       <div className="ts-image">
         <img
           className="tablet+:u-hidden"
-          src="/welcome/background_mobile.png"
+          src="/welcome/background_mobile.webp"
           alt=""
         />
-        <img className="mobile:u-hidden" src="/welcome/background.png" alt="" />
+        <img
+          className="mobile:u-hidden"
+          src="/welcome/background.webp"
+          alt=""
+        />
 
         <div className="ts-mask is-secondary is-top">
           <div className="ts-space is-big" />
@@ -27,6 +28,9 @@ export default function WelcomeComponent() {
             </div>
             <Contact />
           </div>
+        </div>
+        <div className="ts-mask is-secondary is-bottom mobile:u-hidden">
+          <NoCommission />
         </div>
       </div>
     </>
@@ -72,6 +76,20 @@ function Contact() {
       <div className="ts-header is-undecorated">
         <i className="ts-icon is-end-spaced bi-discord" /> 奶加#7343
       </div>
+    </>
+  );
+}
+function NoCommission() {
+  return (
+    <>
+      {IntroduceData.stop_commission && (
+        <div
+          className="ts-box is-collapsed ts-content is-dense"
+          style={{ color: "var(--ts-negative-800)" }}
+        >
+          <div className="ts-header">暫時不接受委託</div>
+        </div>
+      )}
     </>
   );
 }
