@@ -59,7 +59,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     images: {
       thumbnail: "/sticker/sticker_thumbnail.png",
       samples: {
-        template: _.range(16).map(
+        template: _.range(21).map(
           (i: number) =>
             `/sticker/sticker_sample_${(i + 1)
               .toString()
@@ -111,7 +111,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       HeadshotSampleLayoutComponent({ data }),
     images: {
       thumbnail: "/headshot/headshot_thumbnail.png",
-      samples: _.range(11).map(
+      samples: _.range(12).map(
         (i: number) =>
           `/headshot/headshot_sample_${(i + 1)
             .toString()
@@ -193,7 +193,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       CharacterDesignLayoutComponent({ data }),
     images: {
       thumbnail: "/image.png",
-      samples: _.range(4).map(
+      samples: _.range(5).map(
         (i: number) =>
           `/character-design/character_design_sample_${(i + 1)
             .toString()
