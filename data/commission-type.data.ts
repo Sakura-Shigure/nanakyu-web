@@ -111,7 +111,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       HeadshotSampleLayoutComponent({ data }),
     images: {
-      thumbnail: "/headshot/headshot_thumbnail.png",
+      thumbnail: "/headshot/headshot_thumbnail.webp",
       samples: _.range(12).map(
         (i: number) =>
           `/headshot/headshot_sample_${(i + 1)
@@ -185,7 +185,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       CharacterDesignLayoutComponent({ data }),
     images: {
-      thumbnail: "/image.png",
+      thumbnail: "/character-design/character-design_thumbnail.webp",
       samples: _.range(5).map(
         (i: number) =>
           `/character-design/character_design_sample_${(i + 1)
