@@ -20,6 +20,10 @@ export const NoticeData: NoticeModel[] = [
     ],
   },
   {
+    title: "付款方式",
+    content: ["銀行轉帳", "郵局無摺", "超商代碼(需加收手續費)"],
+  },
+  {
     title: "聯絡方式",
     content: ["Twitter, Discord 可直接私訊"],
   },
