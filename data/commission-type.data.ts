@@ -124,16 +124,38 @@ export const CommissionTypeData: CommissionTypeModel[] = [
   {
     name: "插圖",
     link: "illustration",
-    short_description: ["說明尚未準備"],
+    short_description: ["詳細報價需與繪師討論"],
     price: 3000,
-    price_description: ["待新增"],
+    price_description: ["價格會依照設計及構圖複雜度進行調整"],
     steps: [
       {
-        name: "待新增",
-        description: ["待新增"],
+        name: "草圖",
+        description: [
+          "確認配色、動作等",
+        ],
+      },
+      {
+        name: "線稿及填色",
+        description: ["應付總價 80%", "僅接受顏色調整和小物件的位置移動"],
+      },
+      {
+        name: "完稿",
+        description: [
+         "應付總價 100%", "僅接受由我方繪師繪製失誤導致的顏色錯誤修改",
+        ],
+      },
+      {
+        name: "交件",
+        description: ["結清後提交PNG檔"],
       },
     ],
-    notice: ["待新增"],
+    notice: [
+      "稿件開始前的一周內請付清總價的50%作為訂金，一周後仍未支付訂金將自動作廢",
+      "任何階段的訂金，請一周內付清否則不會繼續進行委託",
+      "任意階段，非我方繪師作畫失誤導致的退單/不想要了等等情況下請支付當前階段的稿費，在此之前的稿費皆不退",
+      "如草圖階段非我方繪師這邊的原因導致不想要了/退單，則不退訂金",
+      "有問題請一併提出不要一問一答，不接受臨時提議修改大範圍內容",
+    ],
     layout: (data: CommissionTypeModel) =>
       IllustrationLayoutComponent({ data }),
     images: {
@@ -145,7 +167,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
             .padStart(2, "0")}.webp`
       ),
     },
-    // is_stop: true,
+    is_stop: true,
   },
   {
     name: "人物設計草圖",
