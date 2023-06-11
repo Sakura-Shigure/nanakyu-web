@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
           property="og:description"
           content="主接角色設計、L2D立繪、直播模板"
         />
-        <meta property="og:image" content="/favicon.png" />
+        <meta property="og:image" content="https://nanakyuu.com/favicon.png" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +33,10 @@ export default function App({ Component, pageProps }: AppProps) {
           name="twitter:description"
           content="主接角色設計、L2D立繪、直播模板"
         />
-        <meta name="twitter:image" content="/favicon.png" />
+        <meta
+          name="twitter:image"
+          content="https://nanakyuu.com/favicon.png/"
+        />
       </Head>
       <Component {...pageProps} />
     </>
