@@ -10,7 +10,7 @@ export const ConfigData: ConfigModel = {
   // pageNotice: "目前網站正在施工中，價目表非真實委託價格",
   mainTitle: "奶加",
   logo: {
-    // image: "/image.png", // max ratio: 1:3
+    image: "/favicon.png", // max ratio: 1:3
     text: "奶加",
   },
 };

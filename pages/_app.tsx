@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas/4.2.3/tocas.min.js" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <Component {...pageProps} />
     </>

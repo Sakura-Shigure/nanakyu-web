@@ -57,7 +57,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       StickerSampleLayoutComponent({ data }),
     images: {
-      thumbnail: "/sticker/sticker_thumbnail.png",
+      thumbnail: "/sticker/sticker_thumbnail.webp",
       samples: {
         template: _.range(21).map(
           (i: number) =>
@@ -130,9 +130,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     steps: [
       {
         name: "草圖",
-        description: [
-          "確認配色、動作等",
-        ],
+        description: ["確認配色、動作等"],
       },
       {
         name: "線稿及填色",
@@ -141,7 +139,8 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       {
         name: "完稿",
         description: [
-         "應付總價 100%", "僅接受由我方繪師繪製失誤導致的顏色錯誤修改",
+          "應付總價 100%",
+          "僅接受由我方繪師繪製失誤導致的顏色錯誤修改",
         ],
       },
       {
@@ -159,7 +158,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       IllustrationLayoutComponent({ data }),
     images: {
-      thumbnail: "/illustration/illustration_thumbnail.png",
+      thumbnail: "/illustration/illustration_thumbnail.webp",
       samples: _.range(3).map(
         (i: number) =>
           `/illustration/illustration_sample_${(i + 1)
@@ -263,7 +262,7 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
     layout: (data: CommissionTypeModel) => Live2DLayoutComponent({ data }),
     images: {
-      thumbnail: "/image.png",
+      thumbnail: "/live2d/live2d_thumbnail.webp",
       samples: _.range(2).map(
         (i: number) =>
           `/live2d/live2d_sample_${(i + 1).toString().padStart(2, "0")}.webp`

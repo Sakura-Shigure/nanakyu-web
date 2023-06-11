@@ -2,6 +2,7 @@ import { IntroduceModel } from "@/model/introduce.model";
 
 export const IntroduceData: IntroduceModel = {
   name: "奶加",
+  logo: "/logo.png",
   description: [
     "主接角色設計、L2D立繪、直播模板",
     "擅長女性角色或可愛型男孩",

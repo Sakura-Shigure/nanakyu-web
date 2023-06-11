@@ -10,7 +10,7 @@ export default function TopbarComponent() {
     <>
       <div className="ts-content is-fitted">
         <div className="ts-container is-narrow">
-          <div className="ts-row">
+          <div className="ts-row is-bottom-aligned">
             <div className="column">
               <div className="ts-tab is-large is-start-aligned">
                 <Link className="item" href={"/"}>
@@ -31,7 +31,7 @@ export default function TopbarComponent() {
               </div>
             </div>
             <div className="column is-fluid">
-              <div className="ts-tab is-large is-center-aligned is-accent mobile:u-hidden">
+              <div className="ts-tab is-large is-center-aligned is-relaxed is-accent mobile:u-hidden">
                 {ConfigData.baseRoute.map((data, i) => (
                   <Link
                     key={i}

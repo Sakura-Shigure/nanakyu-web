@@ -1,3 +1,4 @@
+import { ConfigData } from "@/data/config.data";
 import { IntroduceData } from "@/data/introduce.data";
 import Link from "next/link";
 
@@ -41,9 +42,12 @@ function Introduce() {
   return (
     <>
       <div className="ts-wrap is-vertical">
-        <div className="ts-statistic">
+        {/* <div className="ts-statistic">
           <div className="unit">ARTIST /</div>
           <div className="value">{IntroduceData.name}</div>
+        </div> */}
+        <div className="ts-image is-small">
+          <img src={IntroduceData.logo} alt={""} />
         </div>
         <div className="ts-quote is-secondary">
           {IntroduceData.description.map((data, i) => (

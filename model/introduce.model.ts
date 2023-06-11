@@ -1,5 +1,6 @@
 export interface IntroduceModel {
   name: string;
+  logo: string | undefined;
   contact: {
     facebook?: ContactModel;
     instagram?: ContactModel;
