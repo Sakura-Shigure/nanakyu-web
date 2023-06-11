@@ -10,7 +10,13 @@ export default function HeadComponent({ title }: Prop) {
     <>
       <Head>
         <title>{title}</title>
-        <meta property="og:title" content={title} key="title" />
+        <meta property="og:title" content="奶加" />
+        <meta
+          property="og:description"
+          content="主接角色設計、L2D立繪、直播模板"
+        />
+        <meta name="description" content="主接角色設計、L2D立繪、直播模板" />
+        <meta property="og:image" content="/favicon.png" />
       </Head>
     </>
   );
