@@ -9,7 +9,7 @@ import _ from "lodash";
 export const CommissionTypeData: CommissionTypeModel[] = [
   {
     name: "貼圖",
-    link: "stickers",
+    link: "sticker",
     short_description: [
       "請提出想要的動作、數量以及人物設定",
       "如角色設定複雜，會依情況額外加價",
@@ -57,7 +57,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       StickerSampleLayoutComponent({ data }),
     images: {
-      thumbnail: "/sticker/sticker_thumbnail.webp",
       samples: {
         template: _.range(21).map(
           (i: number) =>
@@ -111,7 +110,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       HeadshotSampleLayoutComponent({ data }),
     images: {
-      thumbnail: "/headshot/headshot_thumbnail.webp",
       samples: _.range(12).map(
         (i: number) =>
           `/headshot/headshot_sample_${(i + 1)
@@ -158,7 +156,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       IllustrationLayoutComponent({ data }),
     images: {
-      thumbnail: "/illustration/illustration_thumbnail.webp",
       samples: _.range(3).map(
         (i: number) =>
           `/illustration/illustration_sample_${(i + 1)
@@ -206,10 +203,9 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     layout: (data: CommissionTypeModel) =>
       CharacterDesignLayoutComponent({ data }),
     images: {
-      thumbnail: "/character-design/character-design_thumbnail.webp",
       samples: _.range(5).map(
         (i: number) =>
-          `/character-design/character_design_sample_${(i + 1)
+          `/character_design/character_design_sample_${(i + 1)
             .toString()
             .padStart(2, "0")}.webp`
       ),
@@ -262,7 +258,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
     layout: (data: CommissionTypeModel) => Live2DLayoutComponent({ data }),
     images: {
-      thumbnail: "/live2d/live2d_thumbnail.webp",
       samples: _.range(2).map(
         (i: number) =>
           `/live2d/live2d_sample_${(i + 1).toString().padStart(2, "0")}.webp`

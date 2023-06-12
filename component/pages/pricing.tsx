@@ -6,6 +6,9 @@ export default function PricingComponent() {
   if (CommissionTypeData.length === 0) {
     return <MaintainanceComponent />;
   }
+
+  let thumbnail = (id: string) => `/${id}/${id}_thumbnail.webp`;
+
   return (
     <>
       <div className="ts-wrap is-vertical">
@@ -16,7 +19,7 @@ export default function PricingComponent() {
             key={i}
           >
             <div className="ts-image tablet+:is-medium is-4-by-3 is-covered">
-              <img className="pricing" src={data.images.thumbnail} alt="" />
+              <img className="pricing" src={thumbnail(data.link)} alt="" />
             </div>
             <div className="ts-content">
               <div className="ts-header is-big">

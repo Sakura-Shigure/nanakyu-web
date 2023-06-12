@@ -14,7 +14,6 @@ export interface CommissionTypeModel {
   notice: string[];
   layout?: any;
   images: {
-    thumbnail: string;
     samples: any; // depends on UI
   };
 }
