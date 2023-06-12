@@ -13,7 +13,5 @@ export interface CommissionTypeModel {
   }[];
   notice: string[];
   layout?: any;
-  images: {
-    samples: any; // depends on UI
-  };
+  samples?: string[]; // generate in staticProp
 }

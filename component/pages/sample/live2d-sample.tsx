@@ -5,7 +5,7 @@ interface Prop {
 }
 
 export default function Live2DLayoutComponent({ data }: Prop) {
-  const images = data.images.samples.map((img: string, i: number) => img);
+  const images = data.samples?.map((img: string, i: number) => img) as string[];
   return (
     <>
       <div className="ts-image">

@@ -9,7 +9,7 @@ export default function HeadshotSampleLayoutComponent({ data }: Prop) {
     <>
       <div>
         <div className="ts-grid is-relaxed tablet+:is-3-columns mobile:is-2-columns">
-          {data.images.samples.map((img: string, i: number) => (
+          {data.samples?.map((img: string, i: number) => (
             <div className="column" key={i}>
               <div className="ts-image is-rounded">
                 <img src={img} alt="" />

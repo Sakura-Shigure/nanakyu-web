@@ -5,7 +5,7 @@ interface Prop {
 }
 
 export default function CharacterDesignLayoutComponent({ data }: Prop) {
-  const images = data.images.samples.map((img: string, i: number) => img);
+  const images = data.samples?.map((img: string, i: number) => img) as string[];
   return (
     <>
       <div className="ts-grid is-2-columns">

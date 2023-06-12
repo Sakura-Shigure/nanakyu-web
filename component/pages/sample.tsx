@@ -4,7 +4,7 @@ import { useState } from "react";
 import MaintainanceComponent from "../maintainance";
 import { CommissionTypeModel } from "@/model/commission-type.model";
 
-export default function SampleComponent() {
+export default function SampleComponent(images: any) {
   if (CommissionTypeData.length === 0) {
     return <MaintainanceComponent />;
   }
@@ -14,10 +14,14 @@ export default function SampleComponent() {
   let currentType = CommissionTypeData.find(
     (data) => data.link === commissionType
   );
+  if (currentType != undefined) currentType.samples = images[currentType.link];
   const commissionClick = (data: CommissionTypeModel) => {
     setCommissionType(data.link);
     currentType = data;
   };
+
+  console.log(currentType?.samples);
+
   return (
     <>
       <div>

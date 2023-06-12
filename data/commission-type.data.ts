@@ -56,16 +56,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
     layout: (data: CommissionTypeModel) =>
       StickerSampleLayoutComponent({ data }),
-    images: {
-      samples: {
-        template: _.range(21).map(
-          (i: number) =>
-            `/sticker/sticker_sample_${(i + 1)
-              .toString()
-              .padStart(2, "0")}.webp`
-        ),
-      },
-    },
     // is_stop: true,
   },
   {
@@ -109,14 +99,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
     layout: (data: CommissionTypeModel) =>
       HeadshotSampleLayoutComponent({ data }),
-    images: {
-      samples: _.range(12).map(
-        (i: number) =>
-          `/headshot/headshot_sample_${(i + 1)
-            .toString()
-            .padStart(2, "0")}.webp`
-      ),
-    },
     // is_stop: true,
   },
   {
@@ -155,14 +137,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
     layout: (data: CommissionTypeModel) =>
       IllustrationLayoutComponent({ data }),
-    images: {
-      samples: _.range(3).map(
-        (i: number) =>
-          `/illustration/illustration_sample_${(i + 1)
-            .toString()
-            .padStart(2, "0")}.webp`
-      ),
-    },
     is_stop: true,
   },
   {
@@ -202,14 +176,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
     ],
     layout: (data: CommissionTypeModel) =>
       CharacterDesignLayoutComponent({ data }),
-    images: {
-      samples: _.range(5).map(
-        (i: number) =>
-          `/character_design/character_design_sample_${(i + 1)
-            .toString()
-            .padStart(2, "0")}.webp`
-      ),
-    },
     is_stop: true,
   },
   {
@@ -257,12 +223,6 @@ export const CommissionTypeData: CommissionTypeModel[] = [
       "有問題請一併提出不要一問一答，不接受臨時提議修改大範圍內容",
     ],
     layout: (data: CommissionTypeModel) => Live2DLayoutComponent({ data }),
-    images: {
-      samples: _.range(2).map(
-        (i: number) =>
-          `/live2d/live2d_sample_${(i + 1).toString().padStart(2, "0")}.webp`
-      ),
-    },
     is_stop: true,
   },
 ];
