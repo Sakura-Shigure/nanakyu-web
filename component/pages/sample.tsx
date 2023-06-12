@@ -20,8 +20,6 @@ export default function SampleComponent(images: any) {
     currentType = data;
   };
 
-  console.log(currentType?.samples);
-
   return (
     <>
       <div>
