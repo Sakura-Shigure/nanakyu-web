@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/favicon.png" />
 
         {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="nanakyuu.com" />
         <meta property="twitter:url" content="https://nanakyuu.com/" />
         <meta name="twitter:title" content="奶加" />
