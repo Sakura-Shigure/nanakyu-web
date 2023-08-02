@@ -42,10 +42,6 @@ function Introduce() {
   return (
     <>
       <div className="ts-wrap is-vertical">
-        {/* <div className="ts-statistic">
-          <div className="unit">ARTIST /</div>
-          <div className="value">{IntroduceData.name}</div>
-        </div> */}
         <div className="ts-image is-small">
           <img src={IntroduceData.logo} alt={""} />
         </div>
@@ -77,9 +73,12 @@ function Contact() {
           <i className="ts-icon is-end-spaced bi-twitch" /> Twitch
         </Link>
       )}
-      <div className="ts-header is-undecorated">
-        <i className="ts-icon is-end-spaced bi-discord" /> 奶加#7343
-      </div>
+      {IntroduceData.contact.twitch && (
+        <div className="ts-header is-undecorated">
+          <i className="ts-icon is-end-spaced bi-discord" />
+          {IntroduceData.contact.discord}
+        </div>
+      )}
     </>
   );
 }

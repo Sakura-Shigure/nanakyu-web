@@ -102,7 +102,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
             style={{ color: "var(--ts-primary-800)" }}
           >
             <i className="ts-icon is-rounded is-end-spaced bi-credit-card" />
-            {"詳細價格"}
+            詳細價格
           </div>
           <div className="ts-content">
             {data.price_description.map((desc, i) => (
@@ -122,7 +122,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
             style={{ color: "var(--ts-warning-800)" }}
           >
             <span className="ts-icon is-rounded is-end-spaced is-big bi-arrow-right" />
-            {"委託步驟及付款流程"}
+            委託步驟及付款流程
           </div>
           <div className="ts-content">
             <div className="ts-procedure is-vertical is-unordered">
@@ -160,7 +160,7 @@ export default function CommissionDetailComponent({ data }: Prop) {
             style={{ color: "var(--ts-negative-800)" }}
           >
             <span className="ts-icon is-rounded is-end-spaced bi-exclamation-triangle-fill" />
-            {"注意事項"}
+            注意事項
           </div>
           <div className="ts-content">
             {data.notice.map((desc, i) => (

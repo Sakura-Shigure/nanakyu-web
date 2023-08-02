@@ -7,6 +7,7 @@ export interface IntroduceModel {
     twitter?: ContactModel;
     youtube?: ContactModel;
     twitch?: ContactModel;
+    discord?: string;
     mail?: ContactModel;
   };
   description: string[];
