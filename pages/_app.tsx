@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/favicon.png" />
 
         {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="/welcome/background.webp" />
+        <meta name="twitter:card" content="summary" />
         <meta property="twitter:domain" content="nanakyuu.com" />
         <meta property="twitter:url" content="https://nanakyuu.com/" />
         <meta name="twitter:title" content="奶加" />
@@ -34,7 +34,9 @@ export default function App({ Component, pageProps }: AppProps) {
           name="twitter:description"
           content="主接角色設計、L2D立繪、直播模板"
         />
-        <meta name="twitter:image" content="/favicon.png" />
+        <meta name="twitter:site" content="@SakuraShigure99" />
+        <meta name="twitter:creator" content="@hellojoyin" />
+        <meta name="twitter:image" content="https://nanakyuu.com/favicon.png" />
       </Head>
       <Component {...pageProps} />
     </>
