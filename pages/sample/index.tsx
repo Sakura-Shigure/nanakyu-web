@@ -24,9 +24,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
   CommissionTypeData.forEach((data) =>
     Object.assign(images, {
       [data.link]: fs
-        .readdirSync(`public/${data.link}`)
+        .readdirSync("public/cmsn")
         .filter((file) => file.startsWith(`${data.link}_sample_`))
-        .map((file) => `${data.link}/${file}`),
+        .map((file) => `cmsn/${file}`),
     })
   );
 

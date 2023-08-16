@@ -7,7 +7,7 @@ export default function PricingComponent() {
     return <MaintainanceComponent />;
   }
 
-  let thumbnail = (id: string) => `/${id}/${id}_thumbnail.webp`;
+  let thumbnail = (id: string) => `/cmsn/${id}_thumbnail.webp`;
 
   return (
     <>
