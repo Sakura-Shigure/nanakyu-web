@@ -14,6 +14,9 @@ export default function Live2DLayoutComponent({ data }: Prop) {
       <div className="ts-image">
         <img src={images[1]} alt="" />
       </div>
+      <div className="ts-image">
+        <img src={images[2]} alt="" />
+      </div>
     </>
   );
 }
