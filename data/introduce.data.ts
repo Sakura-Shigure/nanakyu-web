@@ -17,7 +17,7 @@ export const IntroduceData: IntroduceModel = {
       showOnTopbar: true,
       url: "https://www.twitch.tv/nanakyuu301",
     },
-    discord: "@naijia",
+    discord: "@naijia.",
   },
   // stop_commission: true,
 };
